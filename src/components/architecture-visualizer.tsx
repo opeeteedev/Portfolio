@@ -1,0 +1,6 @@
+"use client";
+import { Canvas, useFrame } from "@react-three/fiber";
+import { useRef } from "react";
+import type { Group } from "three";
+function OrbitCluster() { const ref=useRef<Group>(null); useFrame(({clock})=>{if(ref.current){ref.current.rotation.x=clock.elapsedTime*.25;ref.current.rotation.y=clock.elapsedTime*.4;}}); return <group ref={ref}><mesh><icosahedronGeometry args={[1.2,1]}/><meshStandardMaterial color="#FF6B35" emissive="#FF6B35" emissiveIntensity={.7} metalness={.5} roughness={.2}/></mesh><mesh position={[-1.7,.3,.5]}><boxGeometry args={[1,1,1]}/><meshStandardMaterial color="#8aa9ff" emissive="#526acc" emissiveIntensity={.5}/></mesh><mesh position={[1.7,-.5,.2]}><boxGeometry args={[.9,.9,.9]}/><meshStandardMaterial color="#8be3c8" emissive="#2bbd8b" emissiveIntensity={.5}/></mesh><mesh position={[0,1.5,-.5]}><octahedronGeometry args={[.65,0]}/><meshStandardMaterial color="#fff"/></mesh></group>; }
+export function ArchitectureVisualizer() { return <div className="h-[320px] w-full rounded-2xl bg-[#0A0A0B]"><Canvas camera={{position:[0,0,5.5],fov:35}}><ambientLight intensity={1.2}/><directionalLight position={[3,4,5]} intensity={2}/><pointLight position={[-3,-2,2]} intensity={2} color="#7b8dff"/><OrbitCluster/></Canvas></div>; }

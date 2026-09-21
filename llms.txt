@@ -1,0 +1,20 @@
+# Tayo Opeyemi
+
+Lead Systems Architect based in London, UK. I design high-performance SaaS systems, AI ecosystems, and enterprise integration architectures that convert complexity into sustainable growth.
+
+## Services
+- SaaS Architecture
+- AI/ML Integration
+- Enterprise Integration
+- Platform Strategy
+- Technical Due Diligence
+
+## Contact
+- Email: hello@tayo-opeyemi.com
+- Portfolio: https://tayo-opeyemi.com
+
+## Case study themes
+- SaaS platform modernization
+- AI orchestration and workflow design
+- Enterprise integration and data architecture
+- Operational resilience and delivery acceleration
